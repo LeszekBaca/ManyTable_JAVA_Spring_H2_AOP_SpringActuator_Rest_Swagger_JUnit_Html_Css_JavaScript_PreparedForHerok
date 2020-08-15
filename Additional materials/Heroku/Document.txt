@@ -1,0 +1,7 @@
+Example:
+
+https://project-home-work.herokuapp.com/
+
+https://project-home-work.herokuapp.com/swagger-ui.html
+
+https://project-home-work.herokuapp.com/actuator

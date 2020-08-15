@@ -1,0 +1,128 @@
+html, body {
+	margin: 0;
+}
+
+body{
+	font-family: Arial;
+	font-size: 18px;
+}
+
+nav, footer {
+	background-color: green;
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+nav {
+	top: 0;
+	text-align: center;
+	padding: 15px 0;
+	z-index: 1000;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
+	margin: 5px 15px;
+}
+
+
+nav a {
+	text-decoration: none;
+	color: white;
+	opacity: .85;
+	transition: opacity .25s;
+}
+
+nav a:hover {
+	opacity: 1;
+}
+
+.container {
+	margin: 0 20px;
+}
+
+main {
+	padding: 220px 0 50px;
+}
+
+
+@media (min-width: 740px) {
+
+	nav {
+		text-align: right;
+	}
+
+	nav li {
+		display: inline-block;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	nav li:first-child {
+		margin-left: 0;
+	}
+
+	nav li:last-child {
+		margin-right: 0;
+	}	
+
+	main {
+		padding: 80px;
+	}
+}
+
+#cars {
+	position: relative;
+	width: 100%;
+}
+
+#cars div {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transition: 2s;
+}
+
+#cars div:first-child {
+	position: relative;
+}
+
+#cars div.visible {
+	opacity: 1;
+}
+
+#cars img {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+#table-container {
+	margin-top: 30px;
+}
+
+#table-container table {
+	width: 100%;
+	border: 1px solid #888;
+}
+
+#table-container th,
+#table-container td
+ {
+	border: 1px solid #888;
+}
+
+
+footer {
+	bottom: 0;
+	color: white;
+	padding: 10px 0;
+	line-height: 1;
+}
