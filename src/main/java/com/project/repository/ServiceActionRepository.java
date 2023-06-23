@@ -15,7 +15,7 @@ public interface ServiceActionRepository extends JpaRepository<ServiceAction, Lo
 
     @Transactional
     @Query(value = "select e from Service_action e where e.actionStartDate >=:actionStartDate and e.actionEndDate <= :actionEndDate ")
-    List<ServiceAction> findServiceActionByBeatweenDate(@Param("actionStartDate") Date actionStartDate, @Param("actionEndDate") Date actionEndDate);
+    List<ServiceAction> findServiceActionByBetweenDate(@Param("actionStartDate") Date actionStartDate, @Param("actionEndDate") Date actionEndDate);
 
     List<ServiceAction> findByIdComponent(Long id);
 

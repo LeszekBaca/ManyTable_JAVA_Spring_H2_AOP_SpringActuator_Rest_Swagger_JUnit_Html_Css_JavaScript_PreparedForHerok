@@ -19,7 +19,7 @@ public class CarController {
     private CarRepository carRepository;
 
     //Retrieve the Component object using the Mark and Model object Car fields
-    @GetMapping("/getListDataBasenOnMarkAndModel/{mark}/{model}")
+    @GetMapping("/getListDataBaseOnMarkAndModel/{mark}/{model}")
     public ResponseEntity<List<Component>> getListDataBasenOnMarkAndModel(@PathVariable("mark") String mark,
                                                                           @PathVariable("model") String model) {
         return new ResponseEntity<>(carRepository.findByMarkAndModel(mark.toUpperCase(), model.toUpperCase()), HttpStatus.OK);

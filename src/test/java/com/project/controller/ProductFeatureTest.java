@@ -27,7 +27,7 @@ public class ProductFeatureTest {
 
 
     @Test
-    public void delateProductFeatureTestWhenSalesArgumentIsPresent() {
+    public void deleteProductFeatureTestWhenSalesArgumentIsPresent() {
         when(productFeatureRepository.deleteById(1L)).thenReturn(Boolean.TRUE);
         assertEquals(productFeatureController.deleteProductFeature(1L).getStatusCode(), HttpStatus.OK);
     }

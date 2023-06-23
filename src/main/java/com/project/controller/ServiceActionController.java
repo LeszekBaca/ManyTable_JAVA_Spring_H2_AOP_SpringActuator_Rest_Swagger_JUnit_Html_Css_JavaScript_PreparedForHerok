@@ -48,7 +48,7 @@ public class ServiceActionController {
     @GetMapping("/dataBetween/{actionStartDate}/{actionEndDate}")
     public ResponseEntity<List<ServiceAction>> findServiceActionByBeatweenDate(
             @PathVariable("actionStartDate") Date actionStartDate, @PathVariable("actionEndDate") Date actionEndDate) {
-        return new ResponseEntity<>(serviceActionRepository.findServiceActionByBeatweenDate(actionStartDate, actionEndDate), HttpStatus.OK);
+        return new ResponseEntity<>(serviceActionRepository.findServiceActionByBetweenDate(actionStartDate, actionEndDate), HttpStatus.OK);
 
 
     }
