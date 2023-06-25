@@ -21,7 +21,6 @@ public class ServiceActionController {
     private static final Logger logger = LoggerFactory.getLogger(ServiceActionController.class);
 
     @Autowired
-
     private ServiceActionService serviceActionService;
 
     @Autowired

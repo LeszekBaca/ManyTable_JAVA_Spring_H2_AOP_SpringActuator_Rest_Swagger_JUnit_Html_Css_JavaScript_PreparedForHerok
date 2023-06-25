@@ -1,6 +1,6 @@
 package com.project.controller;
 
-import com.project.exception.NotFoundItemException;
+
 import com.project.model.Component;
 import com.project.repository.CarRepository;
 import com.project.repository.ComponentRepository;
@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 
@@ -33,7 +32,7 @@ public class ComponentController {
     //Changing the description of the part with the given id,
     @PutMapping("/changeDescription/{id}")
     public ResponseEntity<Component> updateComponent(@PathVariable Long id, @RequestBody Component component)
-            throws NotFoundItemException {
+            {
 
         //Optional<Component> finderComponent = componentRepository.findById(id);
         if (!componentRepository.findById(id).isPresent()) {
